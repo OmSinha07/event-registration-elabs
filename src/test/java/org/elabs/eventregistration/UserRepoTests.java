@@ -33,6 +33,18 @@ public class UserRepoTests {
     }
 
     @Test
+    public void testAddNew1() {
+        User user = new User();
+        user.setEmail("user876@gmail.com");
+        user.setPassword("user876");
+        user.setFirstName("Matilda");
+        user.setLastName("Doe");
+        user.setRoll(3456);
+        User savedUser = repo.save(user);
+        Assertions.assertNotNull(savedUser, "User was not saved");
+    }
+
+    @Test
     public void testListAll(){
         Iterable<User> users = repo.findAll();
         List<User> userList = new ArrayList<>();

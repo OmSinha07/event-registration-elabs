@@ -1,17 +1,191 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Event Registration</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event_Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+<style>
+  .nav-link
+  {
+    color: black;
+  }
+  .Box
+  {
+    background-color: rgb(177, 152, 6);
+  }
+  .card 
+  {
+ 
+    position: relative;
+    right: -142px;
+    top: 0px;
+  }
+  @media only screen and (max-width: 1000px) {
+  .card 
+  {
+    
+    position: relative;
+    right: 0px;
+    top: 0px;
+  } 
+}
+</style>
 <body>
-<div class="container-fluid text-center">
-    <h1 class="my-3">Sign Up</h1>
-</div>
-<div class="mx-5">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
+
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><img src="./images/images-modified.png" alt="elabs image" width="25px" height="25px"></use></svg>
+      <span class="fs-4">Elabs Event Registration</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Back</a></li
+    </ul>
+  </header>
+
+
+  <main>
+  <div class ="Box">
+    <div class="col-12 col-lg-9 col-xl-9">
+      <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+        <div class="card-body p-4 p-md-5">
+          <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+          <form>
+  
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                  <!-- First name  -->
+                <div data-mdb-input-init="" class="form-outline" data-mdb-input-initialized="true">
+                  <label class="form-label" for="firstName" style="margin-left: 0px;">First Name</label>
+                  <input type="text" id="firstName" class="form-control form-control-lg">
+                  
+                <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 70.4px;"></div><div class="form-notch-trailing"></div></div></div>
+  
+              </div>
+              <div class="col-md-6 mb-4">
+                <!-- Last name -->
+                <div data-mdb-input-init="" class="form-outline" data-mdb-input-initialized="true">
+                  <label class="form-label" for="lastName" style="margin-left: 0px;">Last Name</label>
+                  <input type="text" id="lastName" class="form-control form-control-lg">
+                <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 69.6px;"></div><div class="form-notch-trailing"></div></div></div>
+  
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6 mb-4 d-flex align-items-center">
+                <!-- Event Name -->
+                <div data-mdb-input-init="" class="form-outline datepicker w-100" data-mdb-input-initialized="true">
+                  <label for="birthdayDate" class="form-label" style="margin-left: 0px;">Event Name</label>
+                  <input type="text" class="form-control form-control-lg" id="birthdayDate">
+                <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 55.2px;"></div><div class="form-notch-trailing"></div></div></div>
+  
+              </div>
+              <div class="col-md-6 mb-4">
+                <!-- Gender -->
+                <h6 class="mb-2 pb-1">Gender: </h6>
+                
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender" value="option1" checked="">
+                  <label class="form-check-label" for="femaleGender">Female</label>
+                </div>
+  
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender" value="option2">
+                  <label class="form-check-label" for="maleGender">Male</label>
+                </div>
+  
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender" value="option3">
+                  <label class="form-check-label" for="otherGender">Other</label>
+                </div>
+  
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6 mb-4 pb-2">
+                <!-- Email -->
+                <div data-mdb-input-init="" class="form-outline" data-mdb-input-initialized="true">
+                  <label class="form-label" for="emailAddress" style="margin-left: 0px;">Email</label>
+                  <input type="email" id="emailAddress" class="form-control form-control-lg">
+                <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
+                <div id="select-wrapper-799369" class="select-wrapper"><div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true"><span class="select-arrow"></span><div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 90.4px;"></div><div class="form-notch-trailing"></div></div><div class="form-label select-fake-value">Year</div></div><select data-mdb-select-init="" class="select form-control-lg select-initialized" data-mdb-select-initialized="true">
+                  <!-- Year -->
+                  <option value="1" disabled="disabled">Choose option</option>
+                  <option value="2">1st</option>
+                  <option value="3">2nd</option>
+                  <option value="4">3rd</option>
+                  <option value="5">4th</option>
+
+                </select></div>
+  
+              </div>
+              <div class="col-md-6 mb-4 pb-2">
+                <!-- Branch Name -->
+                <div data-mdb-input-init="" class="form-outline" data-mdb-input-initialized="true">
+                  <label class="form-label" for="phoneNumber" style="margin-left: 0px;">Phone Number</label>
+                  <input type="tel" id="phoneNumber" class="form-control form-control-lg">
+                <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 94.4px;"></div><div class="form-notch-trailing"></div></div></div>
+                <div id="select-wrapper-799369" class="select-wrapper"><div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true"><span class="select-arrow"></span><div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 90.4px;"></div><div class="form-notch-trailing"></div></div><div class="form-label select-fake-value">Branch</div></div><select data-mdb-select-init="" class="select form-control-lg select-initialized" data-mdb-select-initialized="true">
+                  <option value="1" disabled="">Choose option</option>
+                  <option value="2">CSE</option>
+                  <option value="3">IT</option>
+                  <option value="4">CSCE</option>
+                  <option value="5">ECE</option>
+                  <option value="5">OTHERS</option>
+
+                </select></div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-12">
+                <!-- Branch Name -->
+                <div id="select-wrapper-799369" class="select-wrapper"><div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true"><span class="select-arrow"></span><div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 90.4px;"></div><div class="form-notch-trailing"></div></div><div class="form-label select-fake-value">Events</div></div><select data-mdb-select-init="" class="select form-control-lg select-initialized" data-mdb-select-initialized="true">
+                  <option value="1" disabled="">Choose option</option>
+                  <option value="2">Web Devlopment</option>
+                  <option value="3">Java </option>
+                  <option value="4">Machine Learning</option>
+                  <option value="5">Andriod Devlopment</option>
+                  <option value="6">Graphic Designing</option>
+                  <option value="7">UI/UX</option>
+                  <option value="8">IOT & Embedded</option>
+                  <option value="9">Ar and Vr</option>
+
+                </select></div>
+                
+  
+              </div>
+            </div>
+  
+            <div class="mt-4 pt-2">
+              <input data-mdb-ripple-init="" class="btn btn-primary btn-lg" type="submit" value="Submit">
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+  <!-- Footer -->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <svg class="bi me-2" width="40" height="32"><img src="./images/images-modified.png" alt="elabs image" width="25px" height="25px"></use></svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Elabs, Inc</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-</html>
+</html> 
